@@ -59,15 +59,7 @@ class RemapJar extends DefaultTask {
 
         def target = new File(file.parentFile, "${fileName}-srg.jar")
         jarRemapper.remapJar(inJar, target)
-//        def f = new File('D:\\MinecraftServerv1.12.2\\NewMCLib\\buildSrc\\DemoModule.class')
-//        def f2 = new File('D:\\MinecraftServerv1.12.2\\NewMCLib\\buildSrc\\DemoModule2.class')
-//        def output = f2.newOutputStream()
-//        output.write(
-//            jarRemapper.remapClassFile(f.newInputStream(), RuntimeRepo.getInstance())
-//        )
-//        output.flush()
         setOutputJar(target)
-//        newOutputFile().set(target)
 
         def field = Jar.class.getDeclaredField("jarFiles")
         field.setAccessible(true)
