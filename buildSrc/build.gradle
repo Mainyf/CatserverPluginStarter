@@ -1,0 +1,11 @@
+repositories {
+    maven {
+        url = uri("https://hub.spigotmc.org/nexus/content/groups/public")
+    }
+    mavenLocal()
+}
+
+dependencies {
+//    implementation("net.md-5:SpecialSource:1.8.6-SNAPSHOT")
+        implementation("net.md-5:SpecialSource:1.7.4")
+}
